@@ -89,6 +89,9 @@
 
 .card__image {
   position: relative;
+  border-block: 2px solid #000000;
+  width: clamp(23.25rem, 16.0977rem + 30.5164vw, 43.5625rem);
+  height: clamp(23.25rem, 16.0977rem + 30.5164vw, 43.5625rem);
 }
 
 .watermark {
@@ -118,7 +121,7 @@
   overflow: hidden;
   width: clamp(23.25rem, 16.0977rem + 30.5164vw, 43.5625rem);
   height: clamp(23.25rem, 16.0977rem + 30.5164vw, 43.5625rem);
-  border-block: 2px solid #000000;
+  padding-block-end: 3px;
 }
 
 .image-sepia {
