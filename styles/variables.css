@@ -4,6 +4,12 @@
     --main-weight: 410;
     --card-headline-weight: 715;
     --accent-font: "PressStart2P";
+    --content-width: clamp(23.4375rem, 16.2852rem + 30.5164vw, 43.75rem);
+
+    --wght-card-title: 715;
+    --wght-card-text: 410;
+
+    --watermark-stroke: #FFFFFF;
 
     --bg-image:
     repeating-linear-gradient(to right, #d3d3d3 0 2px, transparent 2px 4px),

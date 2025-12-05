@@ -18,3 +18,202 @@
   background-image: var(--bg-image);
   background-size: cover;
 }
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  text-transform: uppercase;
+  background-color: #FFFFFF;
+  border: 2px solid #000000;
+  justify-self: center;
+  text-align: center;
+  align-items: center;
+  padding-block: clamp(7.625rem, 100vw, 8.125rem);
+  margin-block: 100px;
+}
+
+.content-width {
+  width: var(--content-width);
+}
+
+.header__logo {
+  font-family: var(--accent-font);
+  font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
+}
+
+.header__subtitle {
+  font-family: var(--accent-font);
+  font-size: clamp(0.875rem, 0.6805rem + 0.8411vw, 1.4375rem);
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+  margin-inline: auto;
+  margin-block-end: 100px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.card {
+  background-color: #FFFFFF;
+  border: 2px solid #000000;
+}
+
+.card__title {
+  font-family: var(--main-font);
+  font-size: 18px;
+  font-variation-settings: 'wght' var(--wght-card-title);
+  /*font-weight: 715;*/
+  line-height: 1;
+  margin: 4px 10px;
+}
+
+.card__text {
+  font-family: var(--main-font);
+  font-size: 18px;
+  font-variation-settings: 'wght' var(--wght-card-text);
+  /*font-weight: 410;*/
+  line-height: 21px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  margin: 25px;
+}
+
+.card__image {
+  position: relative;
+}
+
+.watermark {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  font-family: var(--accent-font);
+  font-weight: 400;
+  font-size: 14px;
+  text-transform: uppercase;
+  text-shadow: 1px 1px var(--watermark-stroke, #FFFFFF);
+  opacity: 0.5;
+  mix-blend-mode: hard-light;
+  z-index: 1;
+}
+
+@supports((text-stroke: 1px var(--watermark-stroke))) or (-webkit-text-stroke: 1px var(--watermark-stroke)) {
+  .watermark {
+    text-shadow: none;
+    -webkit-text-stroke: 1px var(--watermark-stroke);
+    text-stroke: 1px var(--watermark-stroke);
+  }
+}
+
+.image {
+  object-fit: cover;
+  overflow: hidden;
+  width: clamp(23.25rem, 16.0977rem + 30.5164vw, 43.5625rem);
+  height: clamp(23.25rem, 16.0977rem + 30.5164vw, 43.5625rem);
+  border-block: 2px solid #000000;
+}
+
+.image-sepia {
+  filter: sepia(50%);
+}
+
+.image-brightness {
+  filter: brightness(160%);
+}
+
+.image-contrast {
+  filter: contrast(200%);
+}
+
+.image-grayscale {
+  filter: grayscale(100%);
+}
+
+.image-blur {
+  filter: blur(3px);
+}
+
+.image-hue-rotate {
+  filter: hue-rotate(250deg);
+}
+
+.image-invert {
+  filter: invert(100%) brightness(170%);
+}
+
+.image-saturate {
+  filter: saturate(200%);
+}
+
+
+
+.card__button {
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+  margin-inline-end: 25px;
+  margin-block-end: 25px;
+}
+
+.card__icon-button {
+  background-color: transparent;
+  block-size: 39px;
+  inline-size: 23px;
+}
+
+.card__like-button {
+  border: 2px solid #000000;
+  font-family: var(--accent-font);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 0.9;
+  background-color: #FFFFFF;
+  padding: 12.5px 37px;
+  cursor: pointer;
+  block-size: 38px;
+}
+
+.button-dialog {
+  border: 2px solid #000000;
+  font-family: var(--accent-font);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 0.9;
+  background-color: #FFFFFF;
+  block-size: 55px;
+  inline-size: 335px;
+  margin-inline: auto;
+  margin-block-start: 50px;
+  white-space: nowrap;
+
+  display: flex;
+  align-items: center;
+}
+
+
+/* Здесь вы напишете основную часть стилей страницы.
+
+Будьте внимательны! Для корректной работы скриптов на этом сайте нужно, чтобы в HTML некоторые классы были названы особым образом:
+✦ like-icon — для svg-иконки анимированного сердца
+✦ card__like-button — для кнопки Like рядом с иконкой
+✦ card__icon-button — для кнопки, оборачивающей иконку
+✦ card__icon-button — для кнопки, оборачивающей иконку
+✦ is-liked — для обозначения состояния лайкнутой иконки в виде сердца
+✦ button__text — для обозначения текстового элемента внутри кнопки
+
+*/
+
+@media (width <= 375px) {
+  .button-dialog {
+    block-size: 84px;
+    inline-size: 306px;
+  }
+}
