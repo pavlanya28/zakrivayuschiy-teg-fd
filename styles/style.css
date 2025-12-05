@@ -169,7 +169,7 @@
   inline-size: 39px;
   padding: 0;
   border: none;
-
+transition: outline 0.3s ease;
 }
 
 .card__like-button {
@@ -251,10 +251,6 @@
   box-shadow: 2px 2px 0 #000000;
 }
 
-.card__icon-button {
-  transition: outline 0.3s ease;
-}
-
 .card__icon-button:focus {
   outline: none;
 }
@@ -263,7 +259,7 @@
   outline: 2px solid #000000;
 }
 
-.dialog {
+.dialog[open] {
   position: fixed;
   margin: auto;
   inline-size: 353px;
@@ -277,6 +273,11 @@
   text-transform: uppercase;
 }
 
+.dialog:not([open]) {
+  opacity: 0;
+  pointer-events: none;
+}
+
 .dialog::backdrop {
   background-color: rgb(0 0 0 / 0.3);
   backdrop-filter: blur(7px);
@@ -288,7 +289,7 @@
   align-items: center;
 }
 
-.dialog-icon {
+.icon {
   block-size: 39px;
   inline-size: 39px;
 }
@@ -317,11 +318,6 @@
 .ok {
   block-size: 38px;
   inline-size: 293px;
-}
-
-.dialog:not[open] {
-  transform: scale(0);
-  transition: scale 0.2s;
 }
 
 /* Здесь вы напишете основную часть стилей страницы.
