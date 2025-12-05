@@ -11,6 +11,9 @@
 
     --watermark-stroke: #FFFFFF;
 
+    --contour-color: #000;
+    --animation-fill-color: red;
+
     --bg-image:
     repeating-linear-gradient(to right, #d3d3d3 0 2px, transparent 2px 4px),
     repeating-linear-gradient(to bottom, #d3d3d3 0 2px, transparent 2px 4px),
